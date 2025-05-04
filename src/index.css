@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #101010;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.align_center{
+  display: flex;
+  align-items: center;
+}
+
+
+/* Responsive styles for tablet devices */
+@media screen and (min-width: 577px) and (max-width: 996px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
+}

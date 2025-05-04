@@ -1,0 +1,20 @@
+.app{
+  display: grid;
+  grid-template-rows: 80px auto;
+}
+
+
+
+/* Responsive styles for tablet devices */
+@media screen and (min-width: 577px) and (max-width: 996px) {
+    .app {
+        grid-template-rows: 60px auto;
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media screen and (max-width: 576px) {
+    .app {
+        grid-template-rows: 50px auto;
+    }
+}
