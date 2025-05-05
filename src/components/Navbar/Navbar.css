@@ -4,16 +4,52 @@
     justify-content: space-between;
     padding: 0 30px;
     border-bottom: 1px solid #e6e6e6;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: black;
 }
 
-.navbar > h1 {
-    font-size: 30px;
-    color: #ffe400;
-}
 
 .navbar_links{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style for the expanded menu */
+.navbar_links.block {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    padding: 15px 0;
+    z-index: 20;
+    border-top: 1px solid #444;
+}
+
+/* Style for individual links */
+.navbar_links.block > a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between text and emoji */
+}
+
+/* Remove border for the last item */
+.navbar_links.block > a:last-child {
+    border-bottom: none;
 }
 
 .navbar_links > a {
@@ -26,6 +62,7 @@
     padding: 0 15px;
 }
 
+/* Emoji styling */
 .navbar_emoji {
     width: 25px;
     height: 25px;
@@ -33,7 +70,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 766px) {
     .navbar {
       padding: 0 15px;
     }
@@ -46,6 +83,7 @@
     .navbar_links > a {
       font-size: 16px;
       padding: 0 10px;
+      display: none;
     }
 }
 
@@ -62,6 +100,18 @@
     .navbar_links > a {
         font-size: 16px;
         padding: 0 10px;
+    }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .navbar_links.block {
+        padding: 10px 0;
+    }
+
+    .navbar_links.block > a {
+        font-size: 16px;
+        padding: 8px 0;
     }
 }
 
@@ -83,5 +133,4 @@
         padding: 5px 0;
     }
 } */
-  
-  
+
